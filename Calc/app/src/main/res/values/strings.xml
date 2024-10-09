@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Calc</string>
+    <string name="example">10+10=?</string>
+    <string name="errorAnswer">Ответ не верный!!!</string>
+    <string name="Answer">Ответ верный!!!</string>
+    <string name="buttonOtvet">Решение</string>
+</resources>
