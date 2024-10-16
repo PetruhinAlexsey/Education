@@ -25,19 +25,25 @@ public class MainActivity extends AppCompatActivity {
         TextView textViewNoAnswer=findViewById(R.id.textViewNoAnswer);
         TextView textViewYesAnswer=findViewById(R.id.textViewYesAnswer);
         Button buttonOtvet=findViewById(R.id.buttonOtvet);
+//Домашнее задание
 
-        buttonOtvet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(editTextAnswer.getText().toString().equals("20")){
-                    textViewYesAnswer.setVisibility(View.VISIBLE);
-                    textViewNoAnswer.setVisibility(View.GONE);
-                }else {
-                    textViewNoAnswer.setVisibility(View.VISIBLE);
-                    textViewYesAnswer.setVisibility(View.GONE);
-                }
-            }
-        });
+
+
+
+
+
+//        buttonOtvet.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if(editTextAnswer.getText().toString().equals("20")){
+//                    textViewYesAnswer.setVisibility(View.VISIBLE);
+//                    textViewNoAnswer.setVisibility(View.GONE);
+//                }else {
+//                    textViewNoAnswer.setVisibility(View.VISIBLE);
+//                    textViewYesAnswer.setVisibility(View.GONE);
+//                }
+//            }
+//        });
 
     }
 }
