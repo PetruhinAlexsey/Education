@@ -28,6 +28,18 @@ public class MainActivity extends AppCompatActivity {
 //Домашнее задание
         TextView textView=findViewById(R.id.textViewExample);
         textView.setText("15+45=");
+        buttonOtvet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (editTextAnswer.getText().toString().equals("60")){
+                    textViewYesAnswer.setVisibility(View.VISIBLE);
+                    textViewNoAnswer.setVisibility(View.GONE);
+                }else {
+                    textViewYesAnswer.setVisibility(View.GONE);
+                    textViewNoAnswer.setVisibility(View.VISIBLE);
+                }
+            }
+        });
 
 
 
