@@ -26,11 +26,14 @@ public class MainActivity extends AppCompatActivity {
         TextView textViewYesAnswer=findViewById(R.id.textViewYesAnswer);
         Button buttonOtvet=findViewById(R.id.buttonOtvet);
 //Домашнее задание
+        TextView textView=findViewById(R.id.textViewExample);
+        textView.setText("15+45=");
 
 
 
 
 
+//Домашнее задание
 
 //        buttonOtvet.setOnClickListener(new View.OnClickListener() {
 //            @Override
