@@ -1,6 +1,8 @@
 package com.example.messenger;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +16,12 @@ public class MesReceived extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mes_received);
+
+        TextView MassageText=findViewById(R.id.MassageText);
+
+        Intent intent=getIntent();
+
+        MassageText.setText(intent.getStringExtra("mes"));
 
     }
 }
