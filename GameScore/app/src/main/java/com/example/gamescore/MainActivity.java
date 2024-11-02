@@ -1,6 +1,7 @@
 package com.example.gamescore;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("MainActivity","Вызван метод onCreate");
         setContentView(R.layout.activity_main);
         textViewTeam1_1=findViewById(R.id.textViewTeam1_1);
         textViewTeam2_2=findViewById(R.id.textViewTeam2_2);
@@ -39,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
                 //увеличение счетчика по клику на TextView элемент
                 score1++;
                 updateScore1();
+                //сообщение в лог
+                Log.d("MainActivity","Нажата кнопка  команды 1");
             }
         });
 
@@ -47,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 score2++;
                 updateScore2();
+                Log.d("MainActivity","Нажата кнопка  команды 2");
             }
         });
 
@@ -62,12 +67,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
+        Log.d("MainActivity","Вызван метод onSaveInstanceState");
         outState.putInt("score1",score1);
         outState.putInt("score2",score2);
     }
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        Log.d("MainActivity","Вызван метод onDestroy");
     }
 
 
