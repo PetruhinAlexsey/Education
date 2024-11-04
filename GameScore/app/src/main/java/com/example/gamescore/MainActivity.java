@@ -71,6 +71,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("MainActivity","Вызван метод onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("MainActivity","Вызван метод onPause");
+    }
+
+    @Override
     protected void onStop() {
         super.onStop();
         Log.d("MainActivity","Вызван метод onStop");
