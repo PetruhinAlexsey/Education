@@ -1,5 +1,6 @@
 package com.example.gamescore;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 updateScore1();
                 //сообщение в лог
                 Log.d("MainActivity","Нажата кнопка  команды 1");
+                Intent intent=new Intent(MainActivity.this, TestActivity2.class);
+                startActivity(intent);
             }
         });
 
@@ -101,5 +104,9 @@ public class MainActivity extends AppCompatActivity {
         Log.d("MainActivity","Вызван метод onDestroy");
     }
 
-
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("MainActivity","Вызван метод onRestart");
+    }
 }
