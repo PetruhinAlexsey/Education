@@ -27,9 +27,10 @@ public class MainActivity extends AppCompatActivity {
         textViewTeam1_1=findViewById(R.id.textViewTeam1_1);
         textViewTeam2_2=findViewById(R.id.textViewTeam2_2);
 
-        if (savedInstanceState!=null){
+       if (savedInstanceState!=null){
         score1=savedInstanceState.getInt("score1");
-        score2=savedInstanceState.getInt("score2");}
+        score2=savedInstanceState.getInt("score2");
+        }
 
 
         //установка значения переменной score в TextView
