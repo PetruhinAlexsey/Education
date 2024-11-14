@@ -8,6 +8,22 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="match_parent"
+        android:layout_height="295dp"
+        android:adjustViewBounds="true"
+        app:srcCompat="@mipmap/ic_launcher_foreground" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/miru_mir"
+        android:textAlignment="center"
+        android:textColor="#673AB7"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        />
 
 </LinearLayout>
