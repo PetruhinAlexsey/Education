@@ -20,4 +20,12 @@
         tools:ignore="MissingConstraints"
         app:layout_constraintTop_toTopOf="parent"
         />
+    <RadioGroup
+        android:id="@+id/radioGroupDrinks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textViewPrivet">
+
+
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
