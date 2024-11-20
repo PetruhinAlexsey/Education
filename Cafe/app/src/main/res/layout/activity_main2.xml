@@ -8,8 +8,16 @@
     tools:context=".MainActivity2">
 
     <TextView
+        android:id="@+id/textViewPrivet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Privet_mudak"
-    />
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:layout_margin="15dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
