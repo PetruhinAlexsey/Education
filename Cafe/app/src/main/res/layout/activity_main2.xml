@@ -21,21 +21,27 @@
         app:layout_constraintTop_toTopOf="parent"
         />
     <RadioGroup
-        android:id="@+id/radioGroupDrinks"
+        android:id="@+id/radioGroupTest12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/textViewPrivet">
         <RadioButton
             android:id="@+id/rbTest1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radioButtTest1"
+            android:textStyle="bold"
+            android:layout_margin="12dp"
             />
         <RadioButton
             android:id="@+id/rbTest2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radioButtTest2"
+            android:textStyle="bold"
+            android:layout_margin="12dp"
             />
 
     </RadioGroup>
