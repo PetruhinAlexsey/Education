@@ -11,38 +11,55 @@
         android:id="@+id/textViewPrivet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Privet_mudak"
-        android:textSize="30sp"
-        android:textAlignment="center"
-        android:padding="15dp"
-        android:textStyle="bold"
         android:layout_margin="15dp"
-        tools:ignore="MissingConstraints"
+        android:padding="15dp"
+        android:text="@string/Privet_mudak"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        tools:ignore="MissingConstraints" />
+
     <RadioGroup
         android:id="@+id/radioGroupTest12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/textViewPrivet">
+
         <RadioButton
             android:id="@+id/rbTest1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radioButtTest1"
-            android:textStyle="bold"
             android:layout_margin="12dp"
-            />
+            android:text="@string/radioButtTest1"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
         <RadioButton
             android:id="@+id/rbTest2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radioButtTest2"
-            android:textStyle="bold"
             android:layout_margin="12dp"
-            />
-
+            android:text="@string/radioButtTest2"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewTest3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Test_test1"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_margin="15dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupTest12"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
