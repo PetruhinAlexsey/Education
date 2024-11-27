@@ -8,4 +8,5 @@
     <string name="Test_test1">Test1, %s !</string>
     <string name="radioButtTest1">Test1</string>
     <string name="radioButtTest2">Test2</string>
+    <string name="checktext1">CheckText1</string>
 </resources>

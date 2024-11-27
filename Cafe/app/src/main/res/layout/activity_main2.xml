@@ -62,4 +62,14 @@
         tools:ignore="MissingConstraints"
         app:layout_constraintTop_toBottomOf="@id/radioGroupTest12"
         />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checktext1"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/textViewTest3"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
