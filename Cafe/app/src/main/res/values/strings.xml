@@ -9,4 +9,7 @@
     <string name="radioButtTest1">Test1</string>
     <string name="radioButtTest2">Test2</string>
     <string name="checktext1">CheckText1</string>
+    <string name="checktext2">checktext2</string>
+    <string name="checktext3">checktext3</string>
+    <string name="textviewtest4">textViewTest4</string>
 </resources>

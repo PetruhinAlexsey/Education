@@ -63,13 +63,57 @@
         app:layout_constraintTop_toBottomOf="@id/radioGroupTest12"
         />
     <CheckBox
+        android:id="@+id/checktext1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/checktext1"
         android:textStyle="bold"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/textViewTest3"
+        app:layout_constraintEnd_toStartOf="@id/checktext2"
         app:layout_constraintStart_toStartOf="parent"
+        />
+    <CheckBox
+        android:id="@+id/checktext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checktext2"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/textViewTest3"
+        app:layout_constraintStart_toEndOf="@id/checktext1"
+        app:layout_constraintEnd_toStartOf="@id/checktext3"
+        />
+    <CheckBox
+        android:id="@+id/checktext3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checktext3"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/textViewTest3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/checktext2"
+        />
+    <TextView
+        android:id="@+id/textViewTest4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textviewtest4"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_margin="15dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/checktext2"
+        />
+    <Spinner
+        android:id="@+id/spinnerTest1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textViewTest4"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
