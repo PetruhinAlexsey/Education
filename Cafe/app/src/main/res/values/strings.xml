@@ -12,4 +12,17 @@
     <string name="checktext2">checktext2</string>
     <string name="checktext3">checktext3</string>
     <string name="textviewtest4">textViewTest4</string>
+    <string name="textbuttontest">textButtonTest</string>
+    <array name="arrayTest1">
+        <item>itemTest1</item>
+        <item>itemTest2</item>
+        <item>itemTest3</item>
+        <item>itemTest4</item>
+    </array>
+    <array name="arrayTest2">
+        <item>itemTest1</item>
+        <item>itemTest2</item>
+        <item>itemTest3</item>
+        <item>itemTest4</item>
+    </array>
 </resources>

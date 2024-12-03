@@ -113,7 +113,19 @@
         android:id="@+id/spinnerTest1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:entries="@array/arrayTest1"
         app:layout_constraintTop_toBottomOf="@id/textViewTest4"
         />
-
+    <Spinner
+        android:id="@+id/spinnerTest2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/arrayTest2"
+        app:layout_constraintTop_toBottomOf="@id/textViewTest4"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textbuttontest"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
