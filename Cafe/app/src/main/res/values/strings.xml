@@ -14,15 +14,15 @@
     <string name="textviewtest4">textViewTest4</string>
     <string name="textbuttontest">textButtonTest</string>
     <array name="arrayTest1">
-        <item>itemTest1</item>
-        <item>itemTest2</item>
-        <item>itemTest3</item>
-        <item>itemTest4</item>
+        <item>Test1item</item>
+        <item>Test2item</item>
+        <item>Test3item</item>
+        <item>Test4item</item>
     </array>
     <array name="arrayTest2">
-        <item>itemTest1</item>
-        <item>itemTest2</item>
-        <item>itemTest3</item>
-        <item>itemTest4</item>
+        <item>Test1item</item>
+        <item>Test2item</item>
+        <item>Test3item</item>
+        <item>Test4item</item>
     </array>
 </resources>
