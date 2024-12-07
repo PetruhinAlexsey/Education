@@ -18,8 +18,10 @@
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroupTest12"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+         />
 
     <RadioGroup
         android:id="@+id/radioGroupTest12"
@@ -27,7 +29,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/textViewPrivet">
+        app:layout_constraintBottom_toTopOf="@+id/textViewTest3"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPrivet">
 
         <RadioButton
             android:id="@+id/rbTest1"
@@ -52,81 +55,94 @@
         android:id="@+id/textViewTest3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Test_test1"
-        android:textSize="30sp"
-        android:textAlignment="center"
-        android:padding="15dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
         android:layout_margin="15dp"
+        android:padding="15dp"
+        android:text="@string/Test_test1"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/checktext2"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupTest12"
         tools:ignore="MissingConstraints"
-        app:layout_constraintTop_toBottomOf="@id/radioGroupTest12"
-        />
+         />
+
     <CheckBox
         android:id="@+id/checktext1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/checktext1"
-        android:textStyle="bold"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/textViewTest3"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@id/checktext2"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="@id/checktext2"
+        app:layout_constraintBottom_toBottomOf="@id/checktext2"/>
+
     <CheckBox
         android:id="@+id/checktext2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/checktext2"
-        android:textStyle="bold"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/textViewTest3"
-        app:layout_constraintStart_toEndOf="@id/checktext1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTest4"
         app:layout_constraintEnd_toStartOf="@id/checktext3"
-        />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/checktext1"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTest3" />
+
     <CheckBox
         android:id="@+id/checktext3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/checktext3"
-        android:textStyle="bold"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/textViewTest3"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/checktext2"
-        />
+        app:layout_constraintTop_toTopOf="@id/checktext2"
+        app:layout_constraintBottom_toBottomOf="@id/checktext2"/>
+
     <TextView
         android:id="@+id/textViewTest4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/textviewtest4"
-        android:textSize="30sp"
-        android:textAlignment="center"
-        android:padding="15dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
         android:layout_margin="15dp"
+        android:padding="15dp"
+        android:text="@string/textviewtest4"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerTest1"
+        app:layout_constraintTop_toBottomOf="@+id/checktext2"
         tools:ignore="MissingConstraints"
-        app:layout_constraintTop_toBottomOf="@id/checktext2"
         />
+
     <Spinner
         android:id="@+id/spinnerTest1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/arrayTest1"
-        app:layout_constraintTop_toBottomOf="@id/textViewTest4"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/buttonTest"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTest4" />
+
     <Spinner
         android:id="@+id/spinnerTest2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/arrayTest2"
-        app:layout_constraintTop_toBottomOf="@id/textViewTest4"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/buttonTest"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTest4"  />
+
     <Button
+        android:id="@+id/buttonTest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:text="@string/textbuttontest"
-        app:layout_constraintTop_toBottomOf="@id/spinnerTest2"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTest1"
+         />
 </androidx.constraintlayout.widget.ConstraintLayout>
