@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Cafe</string>
+    <string name="app_name">TestApp</string>
     <string name="miru_mir">Миру мир!</string>
     <string name="userName">Имя пользователя</string>
     <string name="passText">Введите пароль!</string>
@@ -13,6 +13,10 @@
     <string name="checktext3">checktext3</string>
     <string name="textviewtest4">textViewTest4</string>
     <string name="textbuttontest">textButtonTest</string>
+    <string name="textviewtext1">TextViewText1</string>
+    <string name="textviewtext2">textviewtext2</string>
+    <string name="textviewtext3">textviewtext3</string>
+    <string name="textviewtext4">textviewtext4</string>
     <array name="arrayTest1">
         <item>Test1item</item>
         <item>Test2item</item>
