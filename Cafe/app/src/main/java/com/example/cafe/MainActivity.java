@@ -2,14 +2,12 @@ package com.example.cafe;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,12 +20,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
+        buttonInput.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String userName = editTextName.getText().toString().trim();
+                String userPass = editTextPassword.getText().toString().trim();
+
+                if (userName.isEmpty() || userPass.isEmpty()) {
+                    Toast.makeText(MainActivity.this,
+                            "Заполните все поля",
+                            Toast.LENGTH_LONG).show();
+                } else {
+                    nextScreen(userName);
+                }
+            }
+        });
 //        Intent intent=new Intent(this, MainActivity3.class);
 //        startActivity(intent);
     }
-    private void initViews(){
-        editTextName=findViewById(R.id.editTextName);
-        editTextPassword=findViewById(R.id.editTextPassword);
-        buttonInput=findViewById(R.id.buttonInput);
+
+    private void nextScreen(String userName) {
+        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        intent.putExtra("userName", userName);
+        startActivity(intent);
+    }
+
+    private void initViews() {
+        editTextName = findViewById(R.id.editTextName);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        buttonInput = findViewById(R.id.buttonInput);
     }
 }
