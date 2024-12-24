@@ -17,6 +17,7 @@
     <string name="textviewtext2">textviewtext2</string>
     <string name="textviewtext3">textviewtext3</string>
     <string name="textviewtext4">textviewtext4</string>
+    <string name="error">Заполните все поля</string>
     <array name="arrayTest1">
         <item>Test1item</item>
         <item>Test2item</item>

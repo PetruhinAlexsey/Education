@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (userName.isEmpty() || userPass.isEmpty()) {
                     Toast.makeText(MainActivity.this,
-                            "Заполните все поля",
+                            getString(R.string.error),
                             Toast.LENGTH_LONG).show();
                 } else {
                     nextScreen(userName);
