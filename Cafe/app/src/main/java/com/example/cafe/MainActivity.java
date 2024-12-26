@@ -38,13 +38,14 @@ public class MainActivity extends AppCompatActivity {
 //        Intent intent=new Intent(this, MainActivity3.class);
 //        startActivity(intent);
     }
-
+    //метод открытия следющей активити
     private void nextScreen(String userName) {
         Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        //передача имени пользователя по ключу
         intent.putExtra("userName", userName);
         startActivity(intent);
     }
-
+    //Инициализация полей
     private void initViews() {
         editTextName = findViewById(R.id.editTextName);
         editTextPassword = findViewById(R.id.editTextPassword);
