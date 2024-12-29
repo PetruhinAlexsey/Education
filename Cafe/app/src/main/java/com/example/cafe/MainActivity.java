@@ -28,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
                 if (userName.isEmpty() || userPass.isEmpty()) {
                     Toast.makeText(MainActivity.this,
-                            getString(R.string.error),
+                            R.string.error,
+                            //вариант с getString
+                            //getString(R.string.error),
                             Toast.LENGTH_LONG).show();
                 } else {
                     nextScreen(userName);
@@ -40,10 +42,14 @@ public class MainActivity extends AppCompatActivity {
     }
     //метод открытия следющей активити
     private void nextScreen(String userName) {
-        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-        //передача имени пользователя по ключу
-        intent.putExtra("userName", userName);
+        //фабричный метод
+        Intent intent = MainActivity2.newIntent(MainActivity.this,userName);
         startActivity(intent);
+        // старый метод запуска активити
+//        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+//        //передача имени пользователя по ключу
+//        intent.putExtra("userName", userName);
+//        startActivity(intent);
     }
     //Инициализация полей
     private void initViews() {
@@ -51,4 +57,5 @@ public class MainActivity extends AppCompatActivity {
         editTextPassword = findViewById(R.id.editTextPassword);
         buttonInput = findViewById(R.id.buttonInput);
     }
+
 }
