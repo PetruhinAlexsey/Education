@@ -3,6 +3,7 @@ package com.example.cafe;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
@@ -61,17 +62,24 @@ public class MainActivity2 extends AppCompatActivity {
                 }
             }
         });
+        rbTest1.setChecked(true);
 
     }
     private void onRbTest1(){
         radioButton=getString(R.string.radioButtTest1);
         String Test_test1Label=getString(R.string.Test_test1,radioButton);
         textViewTest3.setText(Test_test1Label);
+        checktext3.setVisibility(View.VISIBLE);
+        spinnerTest1.setVisibility(View.VISIBLE);
+        spinnerTest2.setVisibility(View.INVISIBLE);
     }
     private void onRbTest2(){
         radioButton=getString(R.string.radioButtTest2);
         String Test_test1Label=getString(R.string.Test_test1,radioButton);
         textViewTest3.setText(Test_test1Label);
+        checktext3.setVisibility(View.INVISIBLE);
+        spinnerTest1.setVisibility(View.INVISIBLE);
+        spinnerTest2.setVisibility(View.VISIBLE);
     }
     //инициализация элементов активити
     private void initVews() {

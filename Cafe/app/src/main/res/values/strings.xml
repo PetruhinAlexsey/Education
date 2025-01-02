@@ -5,7 +5,7 @@
     <string name="passText">Введите пароль!</string>
     <string name="input">Войти!</string>
     <string name="Privet_mudak">Привет, %s !</string>
-    <string name="Test_test1">Test1, %s !</string>
+    <string name="Test_test1">Test1_Label, %s !</string>
     <string name="radioButtTest1">Test1</string>
     <string name="radioButtTest2">Test2</string>
     <string name="checktext1">CheckText1</string>
@@ -19,15 +19,15 @@
     <string name="textviewtext4">textviewtext4</string>
     <string name="error">Заполните все поля</string>
     <array name="arrayTest1">
-        <item>Test1item</item>
-        <item>Test2item</item>
-        <item>Test3item</item>
-        <item>Test4item</item>
+        <item>Test11item</item>
+        <item>Test12item</item>
+        <item>Test13item</item>
+        <item>Test14item</item>
     </array>
     <array name="arrayTest2">
-        <item>Test1item</item>
-        <item>Test2item</item>
-        <item>Test3item</item>
-        <item>Test4item</item>
+        <item>Test21item</item>
+        <item>Test22item</item>
+        <item>Test23item</item>
+        <item>Test24item</item>
     </array>
 </resources>
