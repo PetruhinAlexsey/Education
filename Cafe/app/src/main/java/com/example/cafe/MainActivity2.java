@@ -64,7 +64,18 @@ public class MainActivity2 extends AppCompatActivity {
         });
         rbTest1.setChecked(true);
 
+        buttonTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clickOnButtonTest();
+            }
+        });
+
     }
+    private void clickOnButtonTest(){
+        
+    }
+
     private void onRbTest1(){
         radioButton=getString(R.string.radioButtTest1);
         String Test_test1Label=getString(R.string.Test_test1,radioButton);
