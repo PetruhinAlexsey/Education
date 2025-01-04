@@ -33,8 +33,11 @@ public class MainActivity2 extends AppCompatActivity {
     private Spinner spinnerTest1;
     private Spinner spinnerTest2;
     private Button buttonTest;
-
+    //текст радиокнопки
     private String radioButton;
+    //имя пользователя в переменной экземпляра класса
+    //для переноса в следующу активити
+    private String userName;
 
     public static Intent newIntent(Context context, String userName) {
         //фабричный метод
@@ -109,12 +112,15 @@ public class MainActivity2 extends AppCompatActivity {
 
     private void putUserName() {
         //новый метод подстановки строки на место плейсхолдера (%s)
-        String userName = getIntent().getStringExtra(EXTRA_USER_NAME);
-        String privet_mudak = getString(R.string.Privet_mudak, userName);
+        userName = getIntent().getStringExtra(EXTRA_USER_NAME);
+
         //на место плейсхолдера-%s этот метод вставит userName
         // (то что после запятой в параметрах метода)
+        String privet_mudak = getString(R.string.Privet_mudak, userName);
         textViewPrivet.setText(privet_mudak);
+
         //старый метод подстановки строки на место плейсхолдера (%s)
+
         // String userName=getIntent().getStringExtra(EXTRA_USER_NAME);
         // String privet_mudak=getString(R.string.Privet_mudak);
         // //на место плейсхолдера-%s этот метод вставит userName
