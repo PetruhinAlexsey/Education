@@ -13,6 +13,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class MainActivity2 extends AppCompatActivity {
 
     //константа EXTRA_USER_NAME
@@ -76,7 +79,23 @@ public class MainActivity2 extends AppCompatActivity {
 
     }
     private void clickOnButtonTest(){
-        
+        ArrayList<String> checkboxes=new ArrayList<>();
+        if (checktext1.isChecked()){
+            checkboxes.add(checktext1.getText().toString());
+        }
+        if (checktext2.isChecked()){
+            checkboxes.add(checktext2.getText().toString());
+        }
+        if (rbTest1.isChecked()&&checktext3.isChecked()){
+            checkboxes.add(checktext3.getText().toString());
+        }
+        String Test1OrTest2Checked="";
+        if (rbTest1.isChecked()){
+            Test1OrTest2Checked=spinnerTest1.getSelectedItem().toString();
+        }else if (rbTest2.isChecked()){
+            Test1OrTest2Checked=spinnerTest2.getSelectedItem().toString();
+        }
+
     }
 
     private void onRbTest1(){
