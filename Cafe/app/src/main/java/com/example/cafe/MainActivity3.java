@@ -12,8 +12,22 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity3 extends AppCompatActivity {
 
-    public static Intent newIntent(Context context, String userName, String radioButton){
+    private static final String EXTRA_USER_NAME="userName";
+    private static final String EXTRA_RADIO_BUTTON="radioButton";
+    private static final String EXTRA_TEST_CHECKED="Test1OrTest2Checked";
+    private static final String EXTRA_CHECK_BOXES="checkboxes";
+
+    public static Intent newIntent(Context context,
+                                   String userName,
+                                   String radioButton,
+                                   String Test1OrTest2Checked,
+                                   String checkboxes)
+    {
         Intent intent=new Intent(context, MainActivity3.class);
+        intent.putExtra(EXTRA_USER_NAME,userName);
+        intent.putExtra(EXTRA_RADIO_BUTTON,radioButton);
+        intent.putExtra(EXTRA_TEST_CHECKED,Test1OrTest2Checked);
+        intent.putExtra(EXTRA_CHECK_BOXES,checkboxes);
         return intent;
     }
 

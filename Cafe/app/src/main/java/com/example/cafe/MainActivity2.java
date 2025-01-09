@@ -95,7 +95,12 @@ public class MainActivity2 extends AppCompatActivity {
         }else if (rbTest2.isChecked()){
             Test1OrTest2Checked=spinnerTest2.getSelectedItem().toString();
         }
-
+    Intent intent=MainActivity3.newIntent(MainActivity2.this,
+            userName,
+            radioButton,
+            Test1OrTest2Checked,
+            checkboxes.toString());
+        startActivity(intent);
     }
 
     private void onRbTest1(){
