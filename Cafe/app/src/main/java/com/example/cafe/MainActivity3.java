@@ -12,18 +12,19 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity3 extends AppCompatActivity {
-
+    //создание констант что бы не ошибаться
+    // в названиях ключей для передачи через интент
     private static final String EXTRA_USER_NAME = "userName";
     private static final String EXTRA_RADIO_BUTTON = "radioButton";
     private static final String EXTRA_TEST_CHECKED = "Test1OrTest2Checked";
     private static final String EXTRA_CHECK_BOXES = "checkboxes";
-
+    //устанавливаем все поля которые будут использованы
     private TextView textView1;
     private TextView textView2;
     private TextView textView3;
     private TextView textView4;
 
-
+    //фабричный метод создания и передачи значений полей через интент
     public static Intent newIntent(Context context,
                                    String userName,
                                    String radioButton,
@@ -44,14 +45,16 @@ public class MainActivity3 extends AppCompatActivity {
         initViews();
         put();
     }
-
+    //метод инициализации полей
     private void initViews() {
         textView1 = findViewById(R.id.textView1);
         textView2 = findViewById(R.id.textView2);
         textView3 = findViewById(R.id.textView3);
         textView4 = findViewById(R.id.textView4);
     }
-
+    
+    //передача значений в текст полей из интента который
+    //открыл эту активити
     private void put() {
         textView1.setText(getIntent().getStringExtra(EXTRA_USER_NAME));
         textView2.setText(getIntent().getStringExtra(EXTRA_RADIO_BUTTON));
