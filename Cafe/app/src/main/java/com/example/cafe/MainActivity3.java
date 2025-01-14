@@ -45,7 +45,8 @@ public class MainActivity3 extends AppCompatActivity {
         initViews();
         put();
     }
-    //метод инициализации полей
+    // метод инициализации полей,
+    // присвоение значений
     private void initViews() {
         textView1 = findViewById(R.id.textView1);
         textView2 = findViewById(R.id.textView2);
