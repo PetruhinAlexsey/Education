@@ -5,6 +5,7 @@ public class Note {
     private String text;
     private int priority;
 
+    //Конструктор
     public Note(int id, String text, int priority) {
         this.id = id;
         this.text = text;
