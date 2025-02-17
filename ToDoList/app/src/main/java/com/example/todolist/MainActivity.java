@@ -42,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
     private void showNotes() {
         for (Note note : notes) {
             //преобразование xml-файла во view-элемент
+//            getLayoutInflater().inflate(
+//       что преобразовать во view   -          R.layout.note_item,
+//       куда вставлять данный элемент   -          linearLayoutNotes,
+//       всегда передается false     -        false
+//            );
             View view = getLayoutInflater().inflate(
                     R.layout.note_item,
                     linearLayoutNotes,
