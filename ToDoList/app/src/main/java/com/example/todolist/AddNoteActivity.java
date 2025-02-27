@@ -1,5 +1,7 @@
 package com.example.todolist;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -54,5 +56,7 @@ public class AddNoteActivity extends AppCompatActivity {
         }
         return priority;
     }
-
+    public static Intent newIntent(Context context){
+        return new Intent(context, AddNoteActivity.class);
+    }
 }
