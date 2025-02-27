@@ -26,7 +26,7 @@ public class AddNoteActivity extends AppCompatActivity {
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                saveNote();
             }
         });
     }
@@ -40,7 +40,19 @@ public class AddNoteActivity extends AppCompatActivity {
     }
     private void saveNote(){
         String text = editTextNote.getText().toString().trim();
+        int priority=getPriority();
     }
 
+    private int getPriority(){
+        int priority;
+        if (radioButtonLow.isChecked()){
+            priority=0;
+        } else if (radioButtonMedium.isChecked()) {
+            priority=1;
+        }else {
+            priority=2;
+        }
+        return priority;
+    }
 
 }
