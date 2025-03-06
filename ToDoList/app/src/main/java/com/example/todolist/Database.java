@@ -3,6 +3,7 @@ package com.example.todolist;
 import java.util.ArrayList;
 
 public class Database {
+
     private ArrayList<Note> notes=new ArrayList<>();
     public void add(Note note){
         notes.add(note);
@@ -14,5 +15,9 @@ public class Database {
                 notes.remove(note);
             }
         }
+    }
+
+    public ArrayList<Note> getNotes() {
+        return new ArrayList<>(notes);
     }
 }
