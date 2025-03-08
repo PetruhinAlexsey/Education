@@ -19,19 +19,21 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout linearLayoutNotes;
     private FloatingActionButton buttonAddNote;
     //Коллекция типа Note
-    private ArrayList<Note> notes = new ArrayList<>();
-
+//    private ArrayList<Note> notes = new ArrayList<>();
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
-        Random random = new Random();
-        for (int i = 0; i < 20; i++) {
-            Note note = new Note(i, "Note " + i, random.nextInt(3));
-            notes.add(note);
-        }
+
+//        Random random = new Random();
+//        for (int i = 0; i < 20; i++) {
+//            Note note = new Note(i, "Note " + i, random.nextInt(3));
+//            notes.add(note);
+//        }
+
         showNotes();
         buttonAddNote.setOnClickListener(new View.OnClickListener() {
             @Override
