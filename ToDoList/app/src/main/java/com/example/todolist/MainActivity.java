@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton buttonAddNote;
     //Коллекция типа Note
 //    private ArrayList<Note> notes = new ArrayList<>();
-    
+    private Database database = new Database();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 //            notes.add(note);
 //        }
 
-        showNotes();
+//        showNotes();
         buttonAddNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,13 +44,20 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        showNotes();
+    }
+
     private void initViews() {
         linearLayoutNotes = findViewById(R.id.linearLayoutNotes);
         buttonAddNote = findViewById(R.id.buttonAddNote);
     }
 
     private void showNotes() {
-        for (Note note : notes) {
+        linearLayoutNotes.removeAllViews();
+        for (Note note : database.getNotes()) {
             //преобразование xml-файла во view-элемент
 //            getLayoutInflater().inflate(
 //       что преобразовать во view   -          R.layout.note_item,
