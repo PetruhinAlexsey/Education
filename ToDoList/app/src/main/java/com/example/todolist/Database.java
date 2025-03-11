@@ -6,6 +6,9 @@ import java.util.Random;
 public class Database {
 
     private ArrayList<Note> notes=new ArrayList<>();
+    public static Database getInstance(){
+        return new Database();
+    }
 
     public Database() {
         Random random = new Random();

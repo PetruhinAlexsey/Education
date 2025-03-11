@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton buttonAddNote;
     //Коллекция типа Note
 //    private ArrayList<Note> notes = new ArrayList<>();
-    private Database database = new Database();
+    private Database database = Database.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
