@@ -6,11 +6,18 @@ import java.util.Random;
 public class Database {
 
     private ArrayList<Note> notes=new ArrayList<>();
+
+    //паттерн проектирования Singleton
+    //Статическая переменная которая хранит экземпляр Database
+    private static Database instance=null;
     public static Database getInstance(){
-        return new Database();
+        if(instance==null){
+            instance = new Database();
+        }
+        return instance;
     }
 
-    public Database() {
+    private Database() {
         Random random = new Random();
         for (int i = 0; i < 20; i++) {
             Note note = new Note(i, "Note " + i, random.nextInt(3));
