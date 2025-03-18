@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showNotes() {
+        //очищаем все записи в linearLayoutNotes
         linearLayoutNotes.removeAllViews();
         for (Note note : database.getNotes()) {
             //преобразование xml-файла во view-элемент
