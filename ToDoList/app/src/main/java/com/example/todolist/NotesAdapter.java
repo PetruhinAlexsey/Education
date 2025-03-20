@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class NotesAdapter extends RecyclerView.Adapter<> {
+
     private ArrayList<Note> notes=new ArrayList<>();
 
     public void setNotes(ArrayList<Note> notes) {
@@ -53,6 +54,7 @@ public class NotesAdapter extends RecyclerView.Adapter<> {
     public int getItemCount() {
         return notes.size();
     }
+
     class NotesViewHolder extends RecyclerView.ViewHolder{
         private TextView textViewNote;
 
