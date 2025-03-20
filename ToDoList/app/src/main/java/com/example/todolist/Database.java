@@ -1,9 +1,30 @@
 package com.example.todolist;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Database {
+
     private ArrayList<Note> notes=new ArrayList<>();
+
+    //паттерн проектирования Singleton
+    //Статическая переменная которая хранит экземпляр Database
+    private static Database instance=null;
+    public static Database getInstance(){
+        if(instance==null){
+            instance = new Database();
+        }
+        return instance;
+    }
+
+    private Database() {
+        Random random = new Random();
+        for (int i = 0; i < 20_000; i++) {
+            Note note = new Note(i, "Note " + i, random.nextInt(3));
+            notes.add(note);
+        }
+    }
+
     public void add(Note note){
         notes.add(note);
     }
@@ -14,5 +35,9 @@ public class Database {
                 notes.remove(note);
             }
         }
+    }
+
+    public ArrayList<Note> getNotes() {
+        return new ArrayList<>(notes);
     }
 }
