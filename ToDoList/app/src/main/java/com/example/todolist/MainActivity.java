@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initViews();
         notesAdapter=new NotesAdapter();
-
+        
 
         recyclerViewNotes.setAdapter(notesAdapter);
         ItemTouchHelper itemTouchHelper=new ItemTouchHelper(new ItemTouchHelper.SimpleCallback() {
