@@ -37,17 +37,7 @@ public class MainActivity extends AppCompatActivity {
         
 
         recyclerViewNotes.setAdapter(notesAdapter);
-        ItemTouchHelper itemTouchHelper=new ItemTouchHelper(new ItemTouchHelper.SimpleCallback() {
-            @Override
-            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
-                return false;
-            }
 
-            @Override
-            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-
-            }
-        });
 
 
 //        Random random = new Random();
