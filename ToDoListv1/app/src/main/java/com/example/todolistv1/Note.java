@@ -1,5 +1,7 @@
 package com.example.todolistv1;
 
+import java.util.ArrayList;
+
 public class Note {
     //поля класса
     private int id;
@@ -8,6 +10,8 @@ public class Note {
     //поле приоритет,
     // чем выше число тем выше приоритет у этой заметки
     private int priority;
+
+
     //Конструктор
     public Note(int id, String text, int priority) {
         this.id = id;
