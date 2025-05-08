@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         Random random=new Random();
         for (int i=0;i<20;i++){
             Note note=new Note(i,"Заметка"+i, random.nextInt(3));
+            //добавляем в коллекцию notes заметку note
             notes.add(note);
         }
     }
