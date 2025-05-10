@@ -43,4 +43,8 @@ public class MainActivity extends AppCompatActivity {
         buttonAddNote=findViewById(R.id.buttonAddNote);
 
     }
+    //метод для деманстрации заметок на экране
+    private void showNotes(){
+
+    }
 }
