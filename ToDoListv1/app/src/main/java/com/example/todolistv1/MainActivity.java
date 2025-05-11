@@ -3,6 +3,7 @@ package com.example.todolistv1;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -64,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
                    linearLayoutNotes,
                    false
            );
+            TextView textViewNote=view.findViewById(R.id.textViewNote);
+
+                textViewNote.setText(note.getText());
+
+
            //помещаем view в linearLayoutNotes
            linearLayoutNotes.addView(view);
         }
