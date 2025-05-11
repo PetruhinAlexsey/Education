@@ -1,6 +1,7 @@
 package com.example.todolistv1;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
             //добавляем в коллекцию notes заметку note
             notes.add(note);
         }
+        //вызываем метод добавления заметок в linearLayoutNotes
+        showNotes();
+
     }
     //метод инициализации переменных
     private void initViews(){
@@ -45,6 +49,23 @@ public class MainActivity extends AppCompatActivity {
     }
     //метод для деманстрации заметок на экране
     private void showNotes(){
-
+        //тип цикла foreach, перебирает note в коллекции notes
+        for(Note note:notes){
+            //в linearLayoutNotes надо
+            // добавить данный макет - note_item.xml
+            //но его преобразовать во view элемент
+            // с помощью getLayoutInflater()
+            //R.layout.note_item - что помещаем (макет note_item.xml)
+            //linearLayoutNotes - куда помещаем
+            //всегда false третьим параметром (что то про прикрепление)
+            //сохраняем в переменную типа View
+           View view=getLayoutInflater().inflate(
+                   R.layout.note_item,
+                   linearLayoutNotes,
+                   false
+           );
+           //помещаем view в linearLayoutNotes
+           linearLayoutNotes.addView(view);
+        }
     }
 }
