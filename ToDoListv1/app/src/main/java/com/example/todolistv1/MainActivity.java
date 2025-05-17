@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -69,7 +70,27 @@ public class MainActivity extends AppCompatActivity {
 
                 textViewNote.setText(note.getText());
 
+                //присваиваем цвет заметке switch case
+            //так мы получаем только id цвета
+            //сам цвет еще нужно получить
+            int colorResId;
+                switch (note.getPriority()){
+                    //если приоритет 0 то ставим зеленый
+                    case 0:colorResId= android.R.color.holo_green_light;
+                    break;
+                    //если приоритет 1 то ставим желтый
+                    case 1:colorResId= android.R.color.holo_orange_light;
+                        break;
+                    //по умолчанию значение colorResId присваивается красный
+                    default:colorResId= android.R.color.holo_red_light;
+                }
+            //просто посмотреть
+            //textViewNote.setText(Integer.toString(colorResId)); - тест, какой id цвета
 
+            //получаем сам цвет
+            //в ContextCompat.getColor передаем контекст - this
+            //и colorResId - id цвета
+            int color= ContextCompat.getColor(this,colorResId);
            //помещаем view в linearLayoutNotes
            linearLayoutNotes.addView(view);
         }
