@@ -91,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
             //в ContextCompat.getColor передаем контекст - this
             //и colorResId - id цвета
             int color= ContextCompat.getColor(this,colorResId);
+            //устанавливаем цвет заметки
+            textViewNote.setBackgroundColor(color);
            //помещаем view в linearLayoutNotes
            linearLayoutNotes.addView(view);
         }
