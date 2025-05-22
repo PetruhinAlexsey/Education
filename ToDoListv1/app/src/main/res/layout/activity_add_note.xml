@@ -7,11 +7,15 @@
     android:layout_height="match_parent"
 android:orientation="vertical"
     tools:context=".AddNoteActivity">
+    <!--Текст заметки-->
     <EditText
         android:id="@+id/editTextNote"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
     android:inputType="textPersonName"
-android:hint="Введите текст заметки: "
+android:hint="@string/note_hint"
+        android:layout_margin="16dp"
         />
+    <!--Радиогруппа переключения важности заметки-->
+    
 </LinearLayout>
