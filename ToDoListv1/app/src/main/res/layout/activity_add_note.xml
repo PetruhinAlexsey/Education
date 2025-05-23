@@ -17,5 +17,34 @@ android:hint="@string/note_hint"
         android:layout_margin="16dp"
         />
     <!--Радиогруппа переключения важности заметки-->
-    
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="16dp"
+        >
+        <RadioButton
+            android:id="@+id/radioBattonLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/low"
+            android:padding="8dp"
+            />
+        <RadioButton
+            android:id="@+id/radioBattonMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medium"
+            android:padding="8dp"
+            />
+        <RadioButton
+            android:id="@+id/radioBattonHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/high"
+            android:padding="8dp"
+            />
+    </RadioGroup>
+
 </LinearLayout>

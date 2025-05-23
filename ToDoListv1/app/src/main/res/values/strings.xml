@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ToDo List v.1</string>
     <string name="note_hint">Введите текст заметки:</string>
+    <string name="low">Низкий</string>
+    <string name="medium">Средний</string>
+    <string name="high">Высокий</string>
 </resources>
