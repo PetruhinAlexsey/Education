@@ -10,7 +10,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class AddNoteActivity extends AppCompatActivity {
 
-    //ссылки на элементы activity_add_note
+    //ссылки на элементы activity_add_note.xml
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
