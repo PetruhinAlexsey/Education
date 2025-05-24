@@ -30,6 +30,8 @@ android:hint="@string/note_hint"
             android:layout_height="wrap_content"
             android:text="@string/low"
             android:padding="8dp"
+            android:background="@android:color/holo_green_light"
+            android:textColor="@android:color/white"
             />
         <RadioButton
             android:id="@+id/radioBattonMedium"
@@ -37,6 +39,8 @@ android:hint="@string/note_hint"
             android:layout_height="wrap_content"
             android:text="@string/medium"
             android:padding="8dp"
+            android:background="@android:color/holo_orange_light"
+            android:textColor="@android:color/white"
             />
         <RadioButton
             android:id="@+id/radioBattonHigh"
@@ -44,7 +48,15 @@ android:hint="@string/note_hint"
             android:layout_height="wrap_content"
             android:text="@string/high"
             android:padding="8dp"
+            android:background="@android:color/holo_red_light"
+            android:textColor="@android:color/white"
             />
     </RadioGroup>
-
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_margin="16dp"
+        />
 </LinearLayout>
