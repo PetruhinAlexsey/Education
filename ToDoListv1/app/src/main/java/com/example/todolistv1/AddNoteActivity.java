@@ -1,6 +1,7 @@
 package com.example.todolistv1;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -25,6 +26,15 @@ public class AddNoteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_note);
+        initViews();
+        //кнопка "сохранить заметку",слушатель клика
+        buttonSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //создаем отдельный метод для сохранения заметки
+
+            }
+        });
 
     }
     //присвоим значение в методе initViews
@@ -34,6 +44,13 @@ public class AddNoteActivity extends AppCompatActivity {
         radioBattonMedium=findViewById(R.id.radioBattonMedium);
         radioBattonHigh=findViewById(R.id.radioBattonHigh);
         buttonSave=findViewById(R.id.buttonSave);
+    }
+    //отдельный метод для сохранения заметки
+    private void saveNote(){
+        //Получаем текст из поля ввода
+        //toString() - приводит к типу стринг
+        //trim() - обрежет пробелы в начале и конце строки
+        String text=editTextNote.getText().toString().trim();
     }
 
 }
