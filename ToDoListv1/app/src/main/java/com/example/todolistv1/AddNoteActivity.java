@@ -32,7 +32,10 @@ public class AddNoteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //создаем отдельный метод для сохранения заметки
-
+                //при клике на кнопу сохранить вызываем метод saveNote()
+                //получаем текст (String text=editTextNote.getText().toString().trim();)
+                // и приоритет (int priority=getPriority();)
+                saveNote();
             }
         });
 
@@ -51,6 +54,19 @@ public class AddNoteActivity extends AppCompatActivity {
         //toString() - приводит к типу стринг
         //trim() - обрежет пробелы в начале и конце строки
         String text=editTextNote.getText().toString().trim();
+        //получаем приоритет из метода getPriority()
+        int priority=getPriority();
+    }
+    //этот метод будет возвращать приоритет (тип int)
+    private int getPriority(){
+        int priority;
+        //проверка какая RadioButton выбрана
+        if(radioBattonLow.isChecked()){
+            priority=0;
+        } else if (radioBattonMedium.isChecked()) {
+            priority=1;
+        }else {priority=2;}
+        return priority;
     }
 
 }
