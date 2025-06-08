@@ -4,14 +4,24 @@
 package com.example.todolistv1;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Database {
     //Коллеция новых заметок
     private ArrayList<Note> notes=new ArrayList<>();
 
+    public Database() {
+        //накидаем в коллекцию notes случайных заметок
+        Random random=new Random();
+        for (int i=0;i<20;i++){
+            Note note=new Note(i,"Заметка"+i, random.nextInt(3));
+            //добавляем в коллекцию notes заметку note
+            notes.add(note);
+        }
+    }
+
     //в коллекцию notes добавляем новый объект note
     private void add(Note note){
-
         notes.add(note);
     }
     //удаляем заметку по ее id
@@ -27,5 +37,10 @@ public class Database {
         }
     }
 
-
+    public ArrayList<Note> getNotes() {
+        //заменяем оригинальную коллекцию notes
+        // копией new ArrayList<>(notes),
+        // для безопасности
+        return new ArrayList<>(notes);
+    }
 }

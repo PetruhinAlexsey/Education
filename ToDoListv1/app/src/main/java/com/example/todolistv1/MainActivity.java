@@ -33,13 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initViews();
 
-        //накидаем в коллекцию notes случайных заметок
-        Random random=new Random();
-        for (int i=0;i<20;i++){
-            Note note=new Note(i,"Заметка"+i, random.nextInt(3));
-            //добавляем в коллекцию notes заметку note
-            notes.add(note);
-        }
+
         //вызываем метод добавления заметок в linearLayoutNotes
         showNotes();
 
