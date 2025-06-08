@@ -1,5 +1,6 @@
 package com.example.todolistv1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -41,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
         }
         //вызываем метод добавления заметок в linearLayoutNotes
         showNotes();
+
+        buttonAddNote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=AddNoteActivity.newIntent(MainActivity.this);
+                startActivity(intent);
+            }
+        });
 
     }
     //метод инициализации переменных
