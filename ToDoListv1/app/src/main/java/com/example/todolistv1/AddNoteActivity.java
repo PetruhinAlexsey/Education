@@ -8,11 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class AddNoteActivity extends AppCompatActivity {
 
@@ -75,4 +71,6 @@ public class AddNoteActivity extends AppCompatActivity {
         return new Intent(context, AddNoteActivity.class);
     }
 
+    public static class Database {
+    }
 }
