@@ -36,7 +36,7 @@ public class Database {
             }
         }
     }
-
+    //метод getNotes() возвращает тип коллекции ArrayList<Note>
     public ArrayList<Note> getNotes() {
         //заменяем оригинальную коллекцию notes
         // копией new ArrayList<>(notes),

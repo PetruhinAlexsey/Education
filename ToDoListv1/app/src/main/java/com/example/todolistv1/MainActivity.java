@@ -24,8 +24,9 @@ public class MainActivity extends AppCompatActivity {
     //кнопка добавления заметки
     private FloatingActionButton buttonAddNote;
 
-    //Коллеция тестовых заметок Note.java
-     private ArrayList<Note> notes = new ArrayList<>();
+    //Экземпляр класса Database, базы данных
+    // где храняться тестовые рандомные заметки
+     private Database database=new Database();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     //метод для деманстрации заметок на экране
     private void showNotes(){
         //тип цикла foreach, перебирает note в коллекции notes
-        for(Note note:notes){
+        for(Note note:database.getNotes()){
             //в linearLayoutNotes надо
             // добавить данный макет - note_item.xml
             //но его надо преобразовать во view элемент
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             //linearLayoutNotes - куда помещаем
             //всегда false третьим параметром (что то про прикрепление)
             //сохраняем в переменную типа View
+                //преобразование к типу View
            View view=getLayoutInflater().inflate(
                    R.layout.note_item,
                    linearLayoutNotes,
