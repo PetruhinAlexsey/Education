@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton buttonAddNote;
 
     //Коллеция тестовых заметок Note.java
-    private ArrayList<Note> notes = new ArrayList<>();
+     private ArrayList<Note> notes = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         buttonAddNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //запуск AddNoteActivity
                 Intent intent=AddNoteActivity.newIntent(MainActivity.this);
                 startActivity(intent);
             }
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         for(Note note:notes){
             //в linearLayoutNotes надо
             // добавить данный макет - note_item.xml
-            //но его преобразовать во view элемент
+            //но его надо преобразовать во view элемент
             // с помощью getLayoutInflater()
             //R.layout.note_item - что помещаем (макет note_item.xml)
             //linearLayoutNotes - куда помещаем
