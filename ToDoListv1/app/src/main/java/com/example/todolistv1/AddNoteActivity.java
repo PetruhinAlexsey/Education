@@ -19,6 +19,7 @@ public class AddNoteActivity extends AppCompatActivity {
     private RadioButton radioBattonHigh;
     private Button buttonSave;
 
+    private com.example.todolistv1.Database database=new com.example.todolistv1.Database();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,9 @@ public class AddNoteActivity extends AppCompatActivity {
         String text=editTextNote.getText().toString().trim();
         //получаем приоритет из метода getPriority()
         int priority=getPriority();
+        //id заметки устанавливается номерорм элемента в коллекции
+        int id =database.getNotes().size();
+
     }
     //этот метод будет возвращать приоритет (тип int)
     private int getPriority(){
