@@ -55,8 +55,14 @@ public class AddNoteActivity extends AppCompatActivity {
         String text=editTextNote.getText().toString().trim();
         //получаем приоритет из метода getPriority()
         int priority=getPriority();
-        //id заметки устанавливается номерорм элемента в коллекции
+        //id заметки устанавливается номером элемента в коллекции
         int id =database.getNotes().size();
+        //создаем новую заметку
+        Note note=new Note(id,text,priority);
+        database.add(note);
+        // для того что бы завершить AddNoteActivity
+        // используем метод finish();
+        finish();
 
     }
     //этот метод будет возвращать приоритет (тип int)

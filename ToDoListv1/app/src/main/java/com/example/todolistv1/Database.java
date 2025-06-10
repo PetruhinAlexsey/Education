@@ -21,7 +21,7 @@ public class Database {
     }
 
     //в коллекцию notes добавляем новый объект note
-    private void add(Note note){
+    public void add(Note note){
         notes.add(note);
     }
     //удаляем заметку по ее id
