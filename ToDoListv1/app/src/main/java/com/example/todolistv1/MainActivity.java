@@ -35,8 +35,7 @@ public class MainActivity extends AppCompatActivity {
         initViews();
 
 
-        //вызываем метод добавления заметок в linearLayoutNotes
-        showNotes();
+
 
         buttonAddNote.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //вызываем метод добавления заметок в linearLayoutNotes
+        showNotes();
+    }
+
     //метод инициализации переменных
     private void initViews(){
         linearLayoutNotes=findViewById(R.id.linearLayoutNotes);
@@ -56,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
     }
     //метод для деманстрации заметок на экране
     private void showNotes(){
+        //перед добавлением заметок linearLayoutNotes надо очищать
+        linearLayoutNotes.removeAllViews();
         //тип цикла foreach, перебирает note в коллекции notes
         for(Note note:database.getNotes()){
             //в linearLayoutNotes надо
