@@ -7,10 +7,21 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Database {
+
     //Коллеция новых заметок
     private ArrayList<Note> notes=new ArrayList<>();
 
-    public Database() {
+    //паттерн проектирования Singleton
+    private static Database instance=null;
+    public static Database getInstance(){
+        if (instance==null){
+            instance=new Database();
+        }
+        return instance;
+    }
+    //делаем конструктор приватным что бы не было возможности создавать
+    //новые экземпляры этого класса без метода getInstance
+    private Database() {
         //накидаем в коллекцию notes случайных заметок
         Random random=new Random();
         for (int i=0;i<20;i++){

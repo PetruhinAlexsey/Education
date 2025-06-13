@@ -19,7 +19,11 @@ public class AddNoteActivity extends AppCompatActivity {
     private RadioButton radioBattonHigh;
     private Button buttonSave;
 
-    private com.example.todolistv1.Database database=new com.example.todolistv1.Database();
+    private com.example.todolistv1.Database database = com.example.todolistv1.Database.getInstance();
+
+    public static Intent newIntent(Context context) {
+        return new Intent(context, AddNoteActivity.class);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,46 +43,47 @@ public class AddNoteActivity extends AppCompatActivity {
         });
 
     }
+
     //присвоим значение в методе initViews
-    private void initViews(){
-        editTextNote=findViewById(R.id.editTextNote);
-        radioBattonLow=findViewById(R.id.radioBattonLow);
-        radioBattonMedium=findViewById(R.id.radioBattonMedium);
-        radioBattonHigh=findViewById(R.id.radioBattonHigh);
-        buttonSave=findViewById(R.id.buttonSave);
+    private void initViews() {
+        editTextNote = findViewById(R.id.editTextNote);
+        radioBattonLow = findViewById(R.id.radioBattonLow);
+        radioBattonMedium = findViewById(R.id.radioBattonMedium);
+        radioBattonHigh = findViewById(R.id.radioBattonHigh);
+        buttonSave = findViewById(R.id.buttonSave);
     }
+
     //отдельный метод для сохранения заметки
-    private void saveNote(){
+    private void saveNote() {
         //Получаем текст из поля ввода
         //toString() - приводит к типу стринг
         //trim() - обрежет пробелы в начале и конце строки
-        String text=editTextNote.getText().toString().trim();
+        String text = editTextNote.getText().toString().trim();
         //получаем приоритет из метода getPriority()
-        int priority=getPriority();
+        int priority = getPriority();
         //id заметки устанавливается номером элемента в коллекции
-        int id =database.getNotes().size();
+        int id = database.getNotes().size();
         //создаем новую заметку
-        Note note=new Note(id,text,priority);
+        Note note = new Note(id, text, priority);
         database.add(note);
         // для того что бы завершить AddNoteActivity
         // используем метод finish();
         finish();
 
     }
+
     //этот метод будет возвращать приоритет (тип int)
-    private int getPriority(){
+    private int getPriority() {
         int priority;
         //проверка какая RadioButton выбрана
-        if(radioBattonLow.isChecked()){
-            priority=0;
+        if (radioBattonLow.isChecked()) {
+            priority = 0;
         } else if (radioBattonMedium.isChecked()) {
-            priority=1;
-        }else {priority=2;}
+            priority = 1;
+        } else {
+            priority = 2;
+        }
         return priority;
-    }
-
-    public static Intent newIntent(Context context){
-        return new Intent(context, AddNoteActivity.class);
     }
 
     public static class Database {

@@ -26,16 +26,13 @@ public class MainActivity extends AppCompatActivity {
 
     //Экземпляр класса Database, базы данных
     // где храняться тестовые рандомные заметки
-     private Database database=new Database();
+     private Database database=Database.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
-
-
-
 
         buttonAddNote.setOnClickListener(new View.OnClickListener() {
             @Override
