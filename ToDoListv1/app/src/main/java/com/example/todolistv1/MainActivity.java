@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -20,7 +21,10 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     //поле с заметками
-    private LinearLayout linearLayoutNotes;
+//    private LinearLayout linearLayoutNotes;
+    //ссылка на RecyclerView
+    private RecyclerView recyclerViewNotes;
+
     //кнопка добавления заметки
     private FloatingActionButton buttonAddNote;
 
@@ -54,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
     //метод инициализации переменных
     private void initViews(){
-        linearLayoutNotes=findViewById(R.id.linearLayoutNotes);
+        recyclerViewNotes=findViewById(R.id.recyclerViewNotes);
         buttonAddNote=findViewById(R.id.buttonAddNote);
 
     }

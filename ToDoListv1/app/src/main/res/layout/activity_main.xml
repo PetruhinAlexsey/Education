@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 <!--комментарии-->
-    <ScrollView
+   <!-- <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -16,7 +16,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" />
-    </ScrollView>
+    </ScrollView>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewNotes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 
 <!--Эта кнопка будет вести на экран добавления новой заметки-->
     <!--Описание для слепых
