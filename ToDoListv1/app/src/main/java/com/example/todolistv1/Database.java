@@ -24,7 +24,7 @@ public class Database {
     private Database() {
         //накидаем в коллекцию notes случайных заметок
         Random random=new Random();
-        for (int i=0;i<20;i++){
+        for (int i=0;i<20_000;i++){
             Note note=new Note(i,"Заметка"+i, random.nextInt(3));
             //добавляем в коллекцию notes заметку note
             notes.add(note);
