@@ -20,7 +20,7 @@ public class NotesAdapter extends RecyclerView.Adapter<> {
     }
 
 
-    //в этом методе надо показать как создавать view из мекета
+    //в этом методе надо показать как создавать view из макета
     @NonNull
     @Override
     public View onCreateView(@NonNull ViewGroup parent, int viewType) {
