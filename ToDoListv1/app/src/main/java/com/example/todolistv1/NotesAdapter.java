@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class NotesAdapter extends RecyclerView.Adapter<> {
+public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHolder> {
 
     private ArrayList<Note> notes=new ArrayList<>();
 
@@ -23,20 +23,19 @@ public class NotesAdapter extends RecyclerView.Adapter<> {
     //в этом методе надо показать как создавать view из макета
     @NonNull
     @Override
-    public View onCreateView(@NonNull ViewGroup parent, int viewType) {
+    public NotesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(
                 R.layout.note_item,
                 parent,
                 false
         );
-        return view;
+        return new NotesViewHolder(view);
     }
 
     @Override
-    public void onBindView(View view, int position) {
+    public void onBindViewHolder(NotesViewHolder viewHolder, int position) {
         Note note=notes.get(position);
-        TextView textViewNote=view.findViewById(R.id.textViewNote);
-        textViewNote.setText(note.getText());
+        viewHolder.textViewNote.setText(note.getText());
         //присваиваем цвет заметке switch case
         //так мы получаем только id цвета
         //сам цвет еще нужно получить
@@ -57,9 +56,9 @@ public class NotesAdapter extends RecyclerView.Adapter<> {
         //получаем сам цвет
         //в ContextCompat.getColor передаем контекст - this
         //и colorResId - id цвета
-        int color= ContextCompat.getColor(view.getContext(),colorResId);
+        int color= ContextCompat.getColor(viewHolder.itemView.getContext(),colorResId);
         //устанавливаем цвет заметки
-        textViewNote.setBackgroundColor(color);
+        viewHolder.textViewNote.setBackgroundColor(color);
     }
 
     @Override
