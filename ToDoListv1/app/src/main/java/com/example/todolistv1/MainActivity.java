@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -28,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
     //кнопка добавления заметки
     private FloatingActionButton buttonAddNote;
 
+    //ссылка на адаптер
+    private NotesAdapter notesAdapter;
+
     //Экземпляр класса Database, базы данных
     // где храняться тестовые рандомные заметки
      private Database database=Database.getInstance();
@@ -37,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
+        //присвоим занчение адаптеру
+        notesAdapter=new NotesAdapter();
+        //сказать private RecyclerView recyclerViewNotes какой адаптер применять
+        recyclerViewNotes.setAdapter(notesAdapter);
+        //необходимо сообщить recyclerViewNotes каким образом отображать элементы
+        
+
 
         buttonAddNote.setOnClickListener(new View.OnClickListener() {
             @Override
