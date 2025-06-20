@@ -11,6 +11,7 @@ public class Database {
     //Коллеция новых заметок
     private ArrayList<Note> notes=new ArrayList<>();
 
+
     //паттерн проектирования Singleton
     private static Database instance=null;
     public static Database getInstance(){
