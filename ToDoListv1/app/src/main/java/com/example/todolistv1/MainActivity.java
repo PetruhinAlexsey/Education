@@ -43,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
         initViews();
         //присвоим занчение адаптеру
         notesAdapter=new NotesAdapter();
+        notesAdapter.setOnNoteClickListener(new NotesAdapter.OnNoteClickListener() {
+            @Override
+            public void onNoteClick(Note note) {
+                database.remove(note.getId());
+                showNotes();
+            }
+        });
         //сказать private RecyclerView recyclerViewNotes какой адаптер применять
         recyclerViewNotes.setAdapter(notesAdapter);
 
